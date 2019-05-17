@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  valor: 9.99
+  valor_promocao: 9.99
+  promocao: false
+  imagem: MyString
+
+two:
+  nome: MyString
+  valor: 9.99
+  valor_promocao: 9.99
+  promocao: false
+  imagem: MyString
