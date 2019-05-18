@@ -1,3 +1,15 @@
 // Place all the styles related to the Produtos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+
+.product-card {
+    background: #fff;
+    transition: box-shadow .3s linear;
+}
+
+.product-card:hover {
+    box-shadow: $shadow !important;
+    cursor:pointer;
+}

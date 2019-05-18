@@ -1,6 +1,6 @@
 <h1>produtos aqui</h1>
 <% @produtos.each do |p| %>
-    <div class="card mb-3 p-2" style="width: 250px;">
+    <div class="product-card mb-3 p-3 shadow-sm" style="width: 250px;">
     <%= image_tag(p.imagem, :style => "height: 200px; width: 200px; display: block;", :class => "mx-auto" )
     %>
     <div class="card-body">
