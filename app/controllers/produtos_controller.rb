@@ -13,7 +13,7 @@ class ProdutosController < ApplicationController
     end
   
     def search
-        if params[:nome].strip!.blank?
+        if params[:nome].strip! == ""
             redirect_to request.referrer
         end
         @produtos = Produto.where("lower(nome) like ?", "%#{params[:nome].downcase}%" )
