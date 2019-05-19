@@ -16,3 +16,9 @@
 body {
     background-color: rgb(252, 252, 252);
 }
+
+.center {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}

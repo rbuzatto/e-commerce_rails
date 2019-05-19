@@ -8,8 +8,14 @@ class ProdutosController < ApplicationController
   
     def create
     end
-  
+
     def show
+    end
+  
+    def search
+        @produtos = Produto.where("lower(nome) like ?", "%#{params[:nome].downcase}%" )
+        puts(@produtos)
+        @produtos
     end
   
 end

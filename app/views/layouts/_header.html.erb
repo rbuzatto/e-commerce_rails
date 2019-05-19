@@ -10,20 +10,22 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Sobre nós</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
+        <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
+          <a class="dropdown-item" href="#">Games</a>
+          <a class="dropdown-item" href="#">Vestuário</a>
+          <a class="dropdown-item" href="#">Eletrodomésticos</a>
+        </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Encontre  aqui!">
+    <%= form_tag({controller: 'produtos', action: 'search'}, method: :get, class: "form-inline my-2 my-lg-0") do %>
+      <%= text_field_tag :nome, "", class: "form-control mr-sm-2", placeholder: "Encontre aqui!" %>
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">
       <span class="oi oi-magnifying-glass" title="icon name" aria-hidden="true"></span>
       </button>
-    </form>
+    <% end %>
   </div>
 </nav>
