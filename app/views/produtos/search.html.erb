@@ -1,7 +1,8 @@
 <% if @produtos.length > 0 %>
+    <h2 class="mb-5"><%= @produtos.length %> produtos encontrados!</h2>
     <% @produtos.each do |p| %>
-        <h6><%= p.nome %></h6>
+        <%= render partial: 'card_produto', locals: { p: p} %>
     <% end %>
 <% else %>
-    <h2 class="mt-4">Nenhum produto encontrado</h2>
+    <h2 class="">Nenhum produto encontrado</h2>
 <% end %>

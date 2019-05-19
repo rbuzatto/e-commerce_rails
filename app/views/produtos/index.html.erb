@@ -1,24 +1,4 @@
 <h1>produtos aqui</h1>
 <% @produtos.each do |p| %>
-    <div 
-        data-aos="fade-up"
-        data-aos-duration="800"
-        class="product-card mb-3 p-3 shadow-sm"
-        style="width: 250px;">
-    <%= image_tag(p.imagem, :style => "height: 200px; width: 200px; display: block;", :class => "mx-auto" )
-    %>
-    <div class="card-body">
-        <h6 class="card-subtitle text-muted"><%= p.nome %></h6>
-        <% if p.promocao %>
-            <p class="card-text">
-                <del><%= number_to_currency(p.valor, :locale => :"pt-BR") %></del>&nbsp
-                <%= number_to_currency(p.valor_promocao, :locale => :"pt-BR") %>
-            </p>
-        <% else %>
-        <p class="card-text">
-            <%= number_to_currency(p.valor, :locale => :"pt-BR") %>
-        </p>
-        <% end %>
-    </div>
-  </div>
+    <%= render partial: 'card_produto', locals: { p: p} %>
 <% end %>

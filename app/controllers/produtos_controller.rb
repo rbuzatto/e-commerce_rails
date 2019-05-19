@@ -13,9 +13,10 @@ class ProdutosController < ApplicationController
     end
   
     def search
+        if params[:nome].strip!.blank?
+            redirect_to request.referrer
+        end
         @produtos = Produto.where("lower(nome) like ?", "%#{params[:nome].downcase}%" )
-        puts(@produtos)
-        @produtos
     end
   
 end

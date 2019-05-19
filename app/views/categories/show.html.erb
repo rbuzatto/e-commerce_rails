@@ -1,0 +1,7 @@
+<% if @produtos.length > 0 %>
+    <% @produtos.each do |p| %>
+        <%= render partial: 'produtos/card_produto', locals: { p: p} %>
+    <% end %>
+<% else %>
+    <h2 class="mt-4">Nenhum produto encontrado</h2>
+<% end %>
