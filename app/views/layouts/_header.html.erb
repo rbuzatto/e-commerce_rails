@@ -15,9 +15,9 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categorias</a>
         <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
-          <a class="dropdown-item" href="#">Games</a>
-          <a class="dropdown-item" href="#">Vestuário</a>
-          <a class="dropdown-item" href="#">Eletrodomésticos</a>
+          <% @categories.each do |c| %>
+          <a class="dropdown-item" href="#"><%= c.name %></a>
+          <% end %>
         </div>
       </li>
     </ul>
