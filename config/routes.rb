@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   get 'produtos/search', to:"produtos#search"
   resources :produtos
+  resources :categories
 
 end
