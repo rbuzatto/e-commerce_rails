@@ -1,3 +1,41 @@
 // Place all the styles related to the Portal controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.portal {
+    width: 100%;
+    position: relative;
+
+    
+    &__title {
+        display: block;
+        position: absolute;
+        top: 75%;
+        left: 35%;
+        font-size: 4rem;
+        color: var(--cyan) !important;
+        text-shadow: 1px 1px 0 var(--white);
+    }
+
+    &__image {
+    
+        filter: blur(1px) sepia(1);
+        animation: blur-out .8s 1.4s ease-in backwards;
+    }
+}
+
+
+
+@keyframes blur-out {
+    0% {
+        filter: blur(16px) sepia(1);
+    }
+    50% {
+        filter: blur(0px) sepia(.2);
+    }
+
+    100% {
+        filter: blur(0px) sepia(.8);
+    }
+}
+
