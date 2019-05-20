@@ -1,6 +1,7 @@
 // Place all the styles related to the Portal controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
 
 .portal {
     width: 100%;
@@ -8,13 +9,19 @@
 
     
     &__title {
+        font-size: 4rem;
+        font-family: 'Rock Salt', cursive;
+        color: var(--cyan) !important;
+        text-shadow: 1px 1px 0 var(--white);
+    }
+
+    &__title-wrapper {
         display: block;
         position: absolute;
         top: 75%;
-        left: 35%;
-        font-size: 4rem;
-        color: var(--cyan) !important;
-        text-shadow: 1px 1px 0 var(--white);
+        left: 50%;
+        transform: translateX(-50%)
+
     }
 
     &__image {
