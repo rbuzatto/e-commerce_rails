@@ -5,11 +5,25 @@
 $shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 
 .product-card {
+    position: relative;
     background: #fff;
     transition: box-shadow .3s linear;
-}
 
-.product-card:hover {
-    box-shadow: $shadow !important;
-    cursor:pointer;
+    &:hover {
+        box-shadow: $shadow !important;
+        cursor:pointer;
+    }
+
+    &__star {
+        font-family: 30px;
+        color: var(--indigo);
+    }
+
+    &__promotion {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: .4rem;
+        background: rgba(var(--indigo), .1);
+    }
 }

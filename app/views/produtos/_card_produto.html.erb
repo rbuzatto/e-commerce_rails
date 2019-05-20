@@ -3,6 +3,14 @@
     data-aos-duration="800"
     class="product-card mb-3 p-3 shadow-sm"
     style="width: 250px;">
+    <% if p.promocao %>
+        <div class="product-card__promotion">
+        <span class="product-card__star oi oi-star"></span>
+        <span class="product-card__discount">
+        <%= number_with_precision((1 - p.valor_promocao/p.valor)*100, :precision => 0, :locale => :"pt-BR") %>% OFF
+        </span>
+        </div>
+    <% end %>
     <%= image_tag(p.imagem, :style => "height: 200px; width: 200px; display: block;", :class => "mx-auto" )
     %>
     <div class="card-body">
