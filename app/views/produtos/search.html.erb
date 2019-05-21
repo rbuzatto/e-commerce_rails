@@ -1,5 +1,8 @@
 <% if @produtos.length > 0 %>
-    <h2 class="mb-5"><%= @produtos.length %> produtos encontrados!</h2>
+    <h2 class="mb-5"> 
+    <%= pluralize(@produtos.length, "produto") %> 
+    <%= "encontrado".pluralize(@produtos.length) %>!
+    </h2>
     <% @produtos.each do |p| %>
         <%= render partial: 'card_produto', locals: { p: p} %>
     <% end %>

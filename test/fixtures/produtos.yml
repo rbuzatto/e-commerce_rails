@@ -1,15 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nome: MyString
-  valor: 9.99
-  valor_promocao: 9.99
-  promocao: false
-  imagem: MyString
+  nome: hot-dog
+  valor: 10
+  valor_promocao: 9
+  promocao: true
+  imagem: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmU-rLaJXW6Qejw-I7vwzwv0SBh4J3IQXXvgMXyYlzWh_Q6XBw
+  category_id: 1
 
 two:
-  nome: MyString
+  nome: pepper
   valor: 9.99
   valor_promocao: 9.99
   promocao: false
-  imagem: MyString
+  imagem: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmU-rLaJXW6Qejw-I7vwzwv0SBh4J3IQXXvgMXyYlzWh_Q6XBw
+  category_id: 1
+
+three:
+  nome: chilli-pepper
+  valor: 5.99
+  valor_promocao: 5.99
+  promocao: true
+  imagem: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmU-rLaJXW6Qejw-I7vwzwv0SBh4J3IQXXvgMXyYlzWh_Q6XBw
+  category_id: 2
