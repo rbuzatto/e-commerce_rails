@@ -3,9 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
 
+$small-screen: var(--breakpoint-sm);
+
 .portal {
+    z-index: -1;
     width: 100%;
+    overflow: hidden;
     position: relative;
+
+    @media only screen and (max-width: 760px) {
+        position: absolute;
+        top: 56px;
+        height: calc(100vh - 56px);
+    }
 
     
     &__title {
@@ -13,6 +23,15 @@
         font-family: 'Rock Salt', cursive;
         color: var(--cyan) !important;
         text-shadow: 1px 1px 0 var(--white);
+        white-space:nowrap;
+
+        @media only screen and (max-width: 760px) {
+            font-size: 2.8rem;
+        }
+
+        @media only screen and (max-width: 576px) {
+            font-size: 2.4rem;
+        }
     }
 
     &__title-wrapper {
@@ -20,14 +39,23 @@
         position: absolute;
         top: 75%;
         left: 50%;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
 
     }
 
     &__image {
-    
+        width: 100%;
         filter: blur(1px) sepia(1);
         animation: blur-out .8s 1.4s ease-in backwards;
+
+        @media only screen and (max-width: 760px) {
+            height: 100%;
+            width: auto;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
 
