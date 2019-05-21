@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 category_list = [
-  [ "Jogos" ],
-  [ "Móveis" ],
-  [ "Vestuário" ],
-  [ "Cozinha" ]
+  "Jogos",
+  "Móveis",
+  "Vestuário",
+  "Cozinha" 
 ]
 
 category_list.each do |name|
